@@ -1,0 +1,38 @@
+extends ../index
+block content 
+    .row
+        .col-lg-12
+            h3.page-header Thêm sản phẩm
+    .row
+        div(class="col-lg-12")
+            div(class="panel panel-default")
+                div(class="panel-heading") Made by Sonel
+                div(class="panel-body")
+                    form(class="row", action="/api/products/add", method="POST")
+                        div(class="col-lg-6")
+                            div(class="form-group")
+                                label Tên sản phẩm
+                                input(class="form-control", type="text", placeholder="Tên sản phẩm", name="name")
+                            div(class="form-group")
+                                label Ảnh
+                                input(class="form-control", type="file", name="file")
+                            div(class="form-group")
+                                label Giá 
+                                input(class="form-control", type="number", name="price")
+                        div(class="col-lg-6")
+                            div(class="form-group")
+                                label Mô tả
+                                textarea(class="form-control", rows="5", name="description")
+                            .form-group
+                                label(for="status") Trạng thái
+                                .checkbox
+                                    label
+                                    input(type='checkbox' value='0' id="status", name="status")
+
+                        div(class="col-lg-12")
+                            div(class="d-flex justify-content-end")
+                                button(class="btn btn-primary") Thêm sản phẩm
+                                    
+                                
+                                    
+                            

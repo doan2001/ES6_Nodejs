@@ -1,0 +1,33 @@
+extends ../index
+block content   
+    .row
+        .col-lg-12
+            h3.page-header Danh sách slide
+
+    .row
+        .col-lg-12
+            .panel.panel-default
+                .panel-heading.d-flex.justify-content-between
+                    | Made by Sonel
+                    a(href="/api/products/add" class="btn btn-primary") Thêm slide 
+                .panel-body
+                    .table-responsive
+                    table#dataTables-example.table.table-striped.table-bordered.table-hover
+                        thead
+                            tr
+                                th #
+                                th Ảnh
+                                th Danh mục
+                                th Đường dẫn liên kết
+                                th Thao tác
+                        tbody
+                            tr.odd.gradeX
+                                td 
+                                td
+                                td.center 
+                                td.center
+                                td
+                                    a(class="btn btn-primary") Sửa
+                                    button(type="button", class="btn btn-danger ml-5") Xóa
+                        
+                

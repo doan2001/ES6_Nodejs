@@ -1,0 +1,44 @@
+extends ../index
+block content   
+    .row
+        .col-lg-12
+            h3.page-header Danh sách sản phẩm
+
+    .row
+        .col-lg-12
+            .panel.panel-default
+                .panel-heading.d-flex.justify-content-between
+                    | Made by Sonel
+                    a(href="/api/products/add" class="btn btn-primary") Thêm sản phẩm 
+                .panel-body
+                    .table-responsive
+                    table#dataTables-example.table.table-striped.table-bordered.table-hover
+                        thead
+                            tr
+                                th #
+                                th Tên sản phẩm
+                                th Danh mục
+                                th Ảnh
+                                th Giá
+                                th Mô tả
+                                th Thao tác
+                        tbody
+                            each prd, index in dataProduct 
+                                tr.odd.gradeX
+                                    td #{index + 1}
+                                    td #{prd.name}
+                                    td 
+                                    td 
+                                        img(src=`http://localhost:4000/api/products/photo/${prd._id}`)
+                                    td.center #{prd.price}
+                                    td.center #{prd.description}
+                                    td
+                                        a(class="btn btn-primary") Sửa
+                                        button(type="button", class="btn btn-danger ml-5" data-id=prd._id) Xóa
+    //- xóa sản phẩm
+    form(method="POST", class="form-delete")
+
+
+
+                        
+                

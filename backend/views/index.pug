@@ -1,0 +1,36 @@
+doctype html
+html(lang='en')
+    head
+        meta(charset='utf-8')
+        meta(http-equiv='X-UA-Compatible' content='IE=edge')
+        meta(name='viewport' content='width=device-width, initial-scale=1')
+        meta(name='description' content='')
+        meta(name='author' content='')
+        title Admin sonel
+        link(rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css')
+        link(href='/src/css/bootstrap.min.css' rel='stylesheet')
+        link(href='/src/css/metisMenu.min.css' rel='stylesheet')
+        link(href='/src/css/timeline.css' rel='stylesheet')
+        link(href='/src/css/startmin.css' rel='stylesheet')
+        link(href='/src/css/morris.css' rel='stylesheet')
+        link(href='/src/css/font-awesome.min.css' rel='stylesheet' type='text/css')
+        link(rel='stylesheet' href='/src/css/style.css')
+    body
+        #wrapper
+            block header 
+                include ./layouts/header
+                
+            div(id="page-wrapper")
+                div(class="container-fluid")
+                    block content
+
+
+
+
+
+        script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js' integrity='sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==' crossorigin='anonymous')
+        script(src='/src/js/bootstrap.min.js')
+        script(src='/src/js/metisMenu.min.js')
+        script(src='/src/js/startmin.js')
+        script(src='/js/main.js')
+
